@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="uploadFile()" >
+    <input type="file" (change)="onFileChange($event)">
+    <button type="submit">Upload File</button>
+</form>
+
+<br>
+<!-- <img *ngFor="let f of file" [src]="'../../../../imageLaravel/storage/app/public/images/'+f.file" alt="fájl" width="20px" > -->
+
+
+
+
+<img *ngFor="let f of file" [src]='"http://localhost:8000/storage/"+f.file' alt="fájl" width="200px" >
